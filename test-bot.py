@@ -5,7 +5,7 @@ import logging
 
 # Create a new instance of a ChatBot
 bot = ChatBot("Jarvis", # Name of bot - Jarvis
-    storage_adapter="chatterbot.storage.JsonFileStorageAdapter",
+    storage_adapter="chatterbot.storage.SQLStorageAdapter",
     logic_adapters=[
         "chatterbot.logic.MathematicalEvaluation", # For mathematical calculation
         "chatterbot.logic.TimeLogicAdapter", # For current time
@@ -13,7 +13,7 @@ bot = ChatBot("Jarvis", # Name of bot - Jarvis
     ],
     input_adapter="chatterbot.input.TerminalAdapter",
     output_adapter="chatterbot.output.TerminalAdapter",
-    database="./database.json"
+    database="./database.db"
 )
 
 print("Hello! I am Jarvis ")
