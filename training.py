@@ -13,6 +13,9 @@ chatterbot.set_trainer(ChatterBotCorpusTrainer)
 chatterbot.train(
     "chatterbot.corpus.english"
 )
+chatterbot.train("chatterbot.corpus.english.greetings")
+chatterbot.train("chatterbot.corpus.english.conversations")
+
 
 response = chatterbot.get_response("Good morning!")
 print(response)
